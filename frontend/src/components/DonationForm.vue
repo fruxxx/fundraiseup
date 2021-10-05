@@ -46,7 +46,6 @@ const axios = require("axios")
 const { getCurrencyList, FROM } = require("../../../general/currency")
 
 function beautyAmount(num) {
-  console.log("beautyAmount", typeof num)
   return num.toLocaleString("en-US", {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
@@ -173,7 +172,7 @@ export default {
           method: "post",
           url: `${process.env.VUE_APP_API_ENDPOINT}/donate`,
           data: {
-            donation: this.donationValue,
+            amount: this.donationValue,
             currency: this.currency,
           },
         })
