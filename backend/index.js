@@ -1,6 +1,6 @@
 const path = require("path")
 require("dotenv").config({ path: path.resolve(__dirname + "./../.env") })
-console.log(process.env.MONGO_URL)
+
 const server = require("./server")
 const mongo = require("./mongo")
 
